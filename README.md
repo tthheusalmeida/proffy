@@ -1,5 +1,5 @@
 <h3 align="center">
-    <img alt="Proffy" width="800" title="#logo" src="NLW_wallpapers/1-NLW-02-2560x1080.jpg">
+    <img alt="Proffy" width="100%" title="#logo" src="NLW_wallpapers/1-NLW-02-2560x1080.jpg">
     <br>
 </h3>
 <p align="center"> 🚀 <strong>Proffy</strong> é um projeto desenvolvido durante a 2ª edição da Next Level Week - Rocketseat.
