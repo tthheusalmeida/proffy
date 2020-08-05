@@ -1,5 +1,5 @@
 <h3 align="center">
-    <img alt="Proffy" width="280" title="#logo" src="./NLW_wallpapers/1-NLW#02-2560x1080.jpg">
+    <img alt="Proffy" width="800" title="#logo" src="NLW_wallpapers/1-NLW-02-2560x1080.jpg">
     <br>
 </h3>
 <p align="center"> 🚀 <strong>Proffy</strong> é um projeto desenvolvido durante a 2ª edição da Next Level Week - Rocketseat.
@@ -48,31 +48,33 @@ O projeto foi desenvolvido com as seguintes tecnologias:
 - [Styled Components](https://styled-components.com/)
 
 ### Screenshot - Versão Web
-<div style="display: flex; flex-direction: 'row'; align-items: 'center';">
-       <img src="" width="400px">
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+       <img src="screenshot/web_prev_1.PNG" width="800">
+       <img src="screenshot/web_prev_2.PNG" width="800">
 </div>
 
 ### Screenshot - Versão Mobile
-<div style="display: flex; flex-direction: 'row';">
-   <img src="" width="180">
+<div style="display: flex; flex-direction: row; ">
+   <img src="screenshot/mobile_prev_1.PNG" width="220">
+   <img src="screenshot/mobile_prev_2.PNG" width="220">
 </div>
 
 ## :package: Como Usar
 
 ### :fire_extinguisher: Back-End (API Rest)
 Clone o projeto em seu computador. Para instalar as dependências e executar o **Servidor** (modo desenvolvimento) execute:
-```bash
+```
 cd server
-yarn install // npm install
-yarn dev // npm dev
+yarn install
+yarn start
 ```
 
 ### :sparkles: Front-End (Aplicação WEB)
-Para iniciar o ** Frontend ** com React use os comandos:
-```bash
+Para iniciar o **Frontend** com React use os comandos:
+```
 cd web
-yarn install // npm install
-yarn start // npm start
+yarn install
+yarn start
 ```
 Depois desse processo terminar, a página`http://localhost:3000`, que contém o projeto desenvolvido, será aberta automaticamente no seu navegador.
 
