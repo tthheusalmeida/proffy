@@ -3,33 +3,55 @@ import React from 'react';
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
+import api from '../../services/api';
 
-function TeacherItem() {
+export interface Teacher {
+    id: number;
+    avatar: string;
+    bio: string;
+    cost: number;
+    name: string;
+    subject: string;
+    whatsapp: string;
+};
+
+
+export interface TeacherItemProps {
+    teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+    function createNewConnection() {
+        api.post('connections', {
+            user_id: teacher.id,
+        });
+    }
+
     return (
         <article className="teacher-item">
             <header>
-                <img src="https://avatars3.githubusercontent.com/u/43671640?s=460&u=8c5459ef6298a9b8cfa5829daa34598767ebcbfb&v=4" alt="Matheus H. S. Almeida" />
+                <img src={teacher.avatar} alt={teacher.name} />
                 <div>
-                    <strong>Matheus H. S. Almeida</strong>
-                    <span>Estrutura de Dados 1</span>
+                    <strong>{teacher.name}</strong>
+                    <span>{teacher.subject}</span>
                 </div>
             </header>
 
-            <p>
-                Pokem ipsum dolor sit amet Tentacool Zebstrika Gligar Paras Lickitung Slowbro.
-                <br /> <br />
-                Brock Glacier Badge Slowpoke Shuppet Bouffalant Keldeo Pidgeot. Celadon City Togepi Fire Qwilfish Luvdisc Burmy Escape Rope. Red Teleport Rotom MysteryBerry Muk Luvdisc Grumpig. Hoenn Terrakion Froslass Delibird Earthquake Seviper Hydreigon.
-            </p>
+            <p>{teacher.bio}</p>
 
             <footer>
                 <p>
                     Preço/hora
-                    <strong>R$ 100,00</strong>
+                    <strong>R$ {teacher.cost}</strong>
                 </p>
-                <button type="button">
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={createNewConnection}
+                    href={`https://wa.me/${teacher.whatsapp}`}>
                     <img src={whatsappIcon} alt="Whatsapp" />
                         Entrar em contato
-                </button>
+                </a>
             </footer>
         </article>
     );
