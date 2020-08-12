@@ -42,7 +42,6 @@ O projeto foi desenvolvido com as seguintes tecnologias:
 - [Knex](http://knexjs.org/)
 - [Node.js](https://nodejs.org/en/)
 - [ReactJS](https://reactjs.org/)
-- [Styled Components](https://styled-components.com/)
 
 ### Screenshot - Versão Web
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
